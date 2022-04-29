@@ -23,13 +23,28 @@ receiver object. For further documentation see [receiver_capi.h](./receiver_capi
    * [mtstates] state objects are implementing the *Receiver C API*. If invoked, the state's
      callback function is invoked with the message arguments.
 
+### Invocations:
+
+   * [ljack] client objects are sending [JACK status messages] to a registered receiver object,
+     see [ljack.client_open()] and [ljack/example02.lua].
+
+   * [ljack] midi receiver processor objects are sending midi messages that were received from a
+     JACK MIDI IN port to a registered receiver object, see [ljack.new_midi_receiver()] 
+     and [ljack/example03.lua].
+
 
 <!-- ---------------------------------------------------------------------------------------- -->
 
-[mtmsg]:                  https://github.com/osch/lua-mtmsg
+[mtmsg]:                     https://github.com/osch/lua-mtmsg
 
-[mtstates]:               https://github.com/osch/lua-mtstates
+[mtstates]:                  https://github.com/osch/lua-mtstates
 
+[ljack]:                     https://github.com/osch/lua-ljack
+[ljack/example02.lua]:       https://github.com/osch/lua-ljack/blob/master/examples/example02.lua
+[ljack/example03.lua]:       https://github.com/osch/lua-ljack/blob/master/examples/example03.lua
+[ljack.client_open()]:       https://github.com/osch/lua-ljack/blob/master/doc/README.md#ljack_client_open
+[ljack.new_midi_receiver()]: https://github.com/osch/lua-ljack/blob/master/doc/README.md#ljack_new_midi_receiver
+[JACK status messages]:      https://github.com/osch/lua-ljack/blob/master/doc/README.md#status-messages
 
 <!-- ---------------------------------------------------------------------------------------- -->
 
