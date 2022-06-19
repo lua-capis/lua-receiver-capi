@@ -28,23 +28,32 @@ receiver object. For further documentation see [receiver_capi.h](./receiver_capi
    * [ljack] client objects are sending [JACK status messages] to a registered receiver object,
      see [ljack.client_open()] and [ljack/example02.lua].
 
-   * [ljack] midi receiver processor objects are sending midi messages that were received from a
-     JACK MIDI IN port to a registered receiver object, see [ljack.new_midi_receiver()] 
-     and [ljack/example03.lua].
+   * [auproc] *MIDI* receiver processor objects are sending midi messages 
+     that were received from an [auproc-capi] connector to a registered receiver object, 
+     see [auproc.new_midi_receiver()] and [ljack/example03.lua].
+
+   * [auproc] *AUDIO* receiver processor objects are sending audio messages 
+     that were received from an [auproc-capi] connector to a registered receiver object, 
+     see [auproc.new_audio_receiver()] and [ljack/example08.lua].
 
 
 <!-- ---------------------------------------------------------------------------------------- -->
 
-[mtmsg]:                     https://github.com/osch/lua-mtmsg
+[mtmsg]:                       https://github.com/osch/lua-mtmsg
 
-[mtstates]:                  https://github.com/osch/lua-mtstates
+[mtstates]:                    https://github.com/osch/lua-mtstates
 
-[ljack]:                     https://github.com/osch/lua-ljack
-[ljack/example02.lua]:       https://github.com/osch/lua-ljack/blob/master/examples/example02.lua
-[ljack/example03.lua]:       https://github.com/osch/lua-ljack/blob/master/examples/example03.lua
-[ljack.client_open()]:       https://github.com/osch/lua-ljack/blob/master/doc/README.md#ljack_client_open
-[ljack.new_midi_receiver()]: https://github.com/osch/lua-ljack/blob/master/doc/README.md#ljack_new_midi_receiver
-[JACK status messages]:      https://github.com/osch/lua-ljack/blob/master/doc/README.md#status-messages
+[ljack]:                       https://github.com/osch/lua-ljack
+[ljack/example02.lua]:         https://github.com/osch/lua-ljack/blob/master/examples/example02.lua
+[ljack/example03.lua]:         https://github.com/osch/lua-ljack/blob/master/examples/example03.lua
+[ljack/example08.lua]:         https://github.com/osch/lua-ljack/blob/master/examples/example08.lua
+[ljack.client_open()]:         https://github.com/osch/lua-ljack/blob/master/doc/README.md#ljack_client_open
+[JACK status messages]:        https://github.com/osch/lua-ljack/blob/master/doc/README.md#status-messages
+
+[auproc]:                      https://github.com/osch/lua-auproc
+[auproc-capi]:                 https://github.com/lua-capis/lua-auproc-capi
+[auproc.new_midi_receiver()]:  https://github.com/osch/lua-auproc/blob/master/doc/README.md#auproc_new_midi_receiver
+[auproc.new_audio_receiver()]: https://github.com/osch/lua-auproc/blob/master/doc/README.md#auproc_new_audio_receiver
 
 <!-- ---------------------------------------------------------------------------------------- -->
 
